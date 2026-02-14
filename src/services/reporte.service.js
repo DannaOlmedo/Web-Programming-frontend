@@ -1,5 +1,5 @@
 const DEV_BACK_URL = "http://localhost:4000";
-const API_URL = (process.env.BACK_URL || DEV_BACK_URL) + "/api/reportes";
+const API_URL = (import.meta.env.VITE_BACK_URL || DEV_BACK_URL) + "/api/reportes";
 
 export const obtenerReportes = async () => {
   const res = await fetch(API_URL);
